@@ -1,76 +1,71 @@
 ---
 title: "Contact Francesco Rosso Zingone"
-description: "Begin Your Evolution to Cyborg Business Consultant"
+description: "Begin Your Business Transformation"
 date: 2025-07-23
 ---
 
 # Contact Francesco Rosso Zingone
-## Begin Your Evolution
+## Begin Your Business Transformation
 
-**Ready to transcend human-only business intelligence?**
+**Ready to transform your business intelligence to the next level?**
 
 ---
 
 ## DISCOVERY DAY (FREE)
 
-**Before any transformation, we need to assess your evolutionary readiness.**
+**Before any transformation, we need to assess your needs and objectives.**
 
 Discovery Day is a complimentary session where we:
 - **Map your current capabilities** and business model
-- **Assess your readiness** for cognitive evolution
+- **Assess your innovation needs** for strategic innovation
 - **Design your transformation pathway** based on your specific context
-- **Determine if you're suited** for cyborg business consulting
+- **Determine how AI can enhance** your business consulting
 
 **Duration:** 3 hours  
-**Format:** In-person (Milan) or video call  
-**Investment:** Complimentary  
-**Commitment:** None—this is pure exploration
+**Format:** In-person or video call  
+**Investment:** Free  
+**Commitment:** None—this is pure strategic exploration
 
 ### **Schedule Discovery Day:**
-**Email:** francesco@cyborgbusinessconsultant.com  
+**Email:** francesco@rossozingone.it  
 **Subject Line:** "Discovery Day Request"  
-**Include:** Brief description of your current business and transformation interest
+**Include:** Brief description of your current business and transformation interests
 
 ---
 
-## 30-DAY CYBORG EVOLUTION
+## BUSINESS EVOLUTION PROGRAM
 
-**For professionals ready for species transformation.**
+**For professionals ready for strategic innovation.**
 
-If Discovery Day confirms your readiness, you can proceed to the complete 30-day evolution program.
+If Discovery Day confirms alignment, you can proceed to the complete business evolution program.
 
 **Investment:** €15,000  
-**Duration:** 30 days intensive  
-**Format:** Daily 1:1 sessions + system implementation  
-**Group Size:** Maximum 12 per cohort  
-**Next Cohort:** September 2025
+**Duration:** Personalized intensive program
 
 ### **Application Process:**
 1. **Complete Discovery Day** (required)
 2. **Submit formal application** with business details
-3. **Commitment confirmation** (full investment + 30-day availability)
+3. **Commitment confirmation** (full investment + program availability)
 4. **Pre-evolution setup** (technology + baseline assessment)
 
 ---
 
 ## FRACTIONAL CMO SERVICES
 
-**For organizations needing cyborg-level marketing leadership.**
+**For organizations needing superior marketing leadership.**
 
-As a Fractional CMO, I bring post-human business intelligence to your marketing strategy, execution, and team development.
+As a Fractional CMO, I bring advanced business intelligence to your marketing strategy, execution and team development.
 
 **Specializations:**
 - AI-integrated marketing strategy
 - Team evolution and capability building  
 - Competitive advantage through cognitive integration
-- Marketing transformation that transcends traditional limits
 
-**Availability:** Limited to 3 client organizations  
-**Duration:** 6-24 month engagements  
+**Duration:** Contracts starting from 6 months  
 **Format:** Hybrid on-site + remote collaboration
 
 ### **Inquiry Process:**
-**Email:** francesco@cyborgbusinessconsultant.com  
+**Email:** francesco@rossozingone.it  
 **Subject Line:** "Fractional CMO Inquiry"  
 **Include:** Company overview + specific marketing challenges
 
@@ -81,17 +76,15 @@ As a Fractional CMO, I bring post-human business intelligence to your marketing 
 **For events exploring the future of business intelligence.**
 
 I speak on:
-- **The Evolution from AI Tools to Cyborg Intelligence**
-- **Post-Human Business Strategy and Competitive Advantage**  
+- **The Evolution from AI Tools to Integrated Intelligence**
 - **Conscious AI Integration for Business Leaders**
-- **Building Competitive Moats Through Species Evolution**
+- **Building Competitive Advantages Through Methodological Innovation**
 
-**Format:** Keynotes, panels, workshops  
-**Audience:** Business leaders, consultants, entrepreneurs  
-**Focus:** Practical evolution, not theoretical AI
+**Audience:** Consultants, entrepreneurs  
+**Focus:** Practical evolution, not AI theory
 
 ### **Speaking Inquiries:**
-**Email:** francesco@cyborgbusinessconsultant.com  
+**Email:** francesco@rossozingone.it  
 **Subject Line:** "Speaking Request"  
 **Include:** Event details + audience profile + topic preferences
 
@@ -101,25 +94,20 @@ I speak on:
 
 **LinkedIn:** [Francesco Rosso Zingone](https://linkedin.com/in/francescozingone)  
 **Twitter:** [@F_Zingone](https://twitter.com/F_Zingone)  
-**Email:** francesco@cyborgbusinessconsultant.com
-
-**Location:** Milan, Italy (Travel available worldwide)
+**Email:** francesco@rossozingone.it
 
 ---
 
-## IMPORTANT DISCLAIMERS
+## IMPORTANT INFORMATION
 
-### **Evolution Readiness Assessment Required**
-Not everyone is ready for cyborg business evolution. Discovery Day exists to determine if you have the cognitive flexibility, business foundation, and commitment necessary for successful transformation.
+### **Readiness Assessment Required**
+Not everyone is ready for advanced business evolution. Discovery Day exists to determine if you have the strategic flexibility, business foundation and commitment necessary for successful transformation.
 
-### **Irreversible Transformation Warning**
-The 30-day evolution program creates permanent changes in how you think and operate. You will never function purely as a human consultant again. Only proceed if you're ready for irreversible cognitive evolution.
+### **Significant Methodological Transformation**
+The Business Evolution Program creates permanent changes in how you think and operate. You will never function again as a purely traditional entrepreneur. Only proceed if you're ready for irreversible methodological evolution.
 
 ### **Limited Availability**
-As the first and currently only cyborg business consultant, my availability is extremely limited. All programs have waiting lists and strict qualification requirements.
-
-### **Investment Protection**
-All paid programs include success guarantees. If you complete the program and don't achieve measurable cognitive evolution, you receive a full refund.
+As the first and currently only business consultant of this type in Italy, my availability is extremely limited. All programs have waiting lists and strict qualification requirements.
 
 ---
 
@@ -127,7 +115,7 @@ All paid programs include success guarantees. If you complete the program and do
 
 **1. Read [The Manifesto](/manifesto)** to understand the complete vision
 
-**2. Review [30-Day Evolution](/evolution)** to see the transformation process
+**2. Review [Business Evolution](/evolution)** to see the transformation process
 
 **3. Book Discovery Day** to assess your readiness
 
