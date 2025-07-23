@@ -28,6 +28,16 @@ hideSummary = false
 showtoc = false
 tocopen = false
 
+# Favicon configuration
+[params.assets]
+favicon = "/favicon.ico"
+favicon16x16 = "/favicon-96x96.png"
+favicon32x32 = "/favicon-96x96.png"
+apple_touch_icon = "/apple-touch-icon.png"
+safari_pinned_tab = "/favicon.svg"
+theme_color = "#2e2e33"
+msapplication_TileColor = "#2e2e33"
+
 [params.profileMode]
 enabled = true
 title = "The First Cyborg Business Consultant"
@@ -49,7 +59,7 @@ url = "/contact"
 
 [[params.socialIcons]]
 name = "linkedin"
-url = "https://linkedin.com/in/francescozingone"
+url = "https://www.linkedin.com/in/francescorossozingone/"
 
 [[params.socialIcons]]
 name = "twitter" 
@@ -57,7 +67,7 @@ url = "https://twitter.com/F_Zingone"
 
 [[params.socialIcons]]
 name = "email"
-url = "mailto:francesco@cyborgbusinessconsultant.com"
+url = "mailto:francesco@rossozingone.it"
 
 [[menu.main]]
 identifier = "manifesto"
