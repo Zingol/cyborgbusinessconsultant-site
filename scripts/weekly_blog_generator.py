@@ -41,22 +41,61 @@ INTERNAL_LINKS = [
     ("/evolution", "Business Evolution Program")
 ]
 
-# External links pool per autorevolezza
-EXTERNAL_SOURCES = [
-    ("https://www.mckinsey.com/", "McKinsey Global Institute"),
-    ("https://hbr.org/", "Harvard Business Review"),
-    ("https://www.pwc.com/", "PwC Research"),
-    ("https://www.bcg.com/", "Boston Consulting Group"),
-    ("https://www.accenture.com/", "Accenture Strategy"),
-    ("https://www.deloitte.com/", "Deloitte Insights")
-]
+# External links pool organizzati per topic
+EXTERNAL_SOURCES_BY_TOPIC = {
+    "marketing": [
+        ("https://hbr.org/", "Harvard Business Review", "According to Harvard Business Review research"),
+        ("https://www.mckinsey.com/", "McKinsey Global Institute", "McKinsey studies show that"),
+        ("https://www.pwc.com/", "PwC Research", "PwC analysis reveals")
+    ],
+    "operations": [
+        ("https://www.mckinsey.com/", "McKinsey Global Institute", "McKinsey research demonstrates"),
+        ("https://www.accenture.com/", "Accenture Strategy", "Accenture findings indicate"),
+        ("https://www.deloitte.com/", "Deloitte Insights", "Deloitte studies confirm")
+    ],
+    "technology": [
+        ("https://www.accenture.com/", "Accenture Strategy", "Accenture technology research shows"),
+        ("https://www.pwc.com/", "PwC Research", "PwC digital transformation studies reveal"),
+        ("https://www.bcg.com/", "Boston Consulting Group", "BCG technology analysis indicates")
+    ],
+    "finance": [
+        ("https://www.mckinsey.com/", "McKinsey Global Institute", "McKinsey financial analysis shows"),
+        ("https://www.pwc.com/", "PwC Research", "PwC financial services research reveals"),
+        ("https://www.deloitte.com/", "Deloitte Insights", "Deloitte financial studies demonstrate")
+    ],
+    "strategy": [
+        ("https://www.bcg.com/", "Boston Consulting Group", "Boston Consulting Group research shows"),
+        ("https://hbr.org/", "Harvard Business Review", "Harvard Business Review analysis reveals"),
+        ("https://www.mckinsey.com/", "McKinsey Global Institute", "McKinsey strategic research demonstrates")
+    ]
+}
+
+def select_external_source(topic):
+    """Seleziona fonte esterna appropriata basata sul topic"""
+    
+    # Determina categoria del topic
+    topic_lower = topic.lower()
+    
+    if any(word in topic_lower for word in ["marketing", "customer", "lead", "conversion", "content"]):
+        category = "marketing"
+    elif any(word in topic_lower for word in ["operations", "supply", "inventory", "automation", "process"]):
+        category = "operations"
+    elif any(word in topic_lower for word in ["ai", "technology", "chatbot", "machine learning", "digital"]):
+        category = "technology"
+    elif any(word in topic_lower for word in ["financial", "finance", "cost", "roi", "budget"]):
+        category = "finance"
+    else:
+        category = "strategy"
+    
+    # Seleziona fonte casuale dalla categoria appropriata
+    return random.choice(EXTERNAL_SOURCES_BY_TOPIC[category])
 
 def generate_prompt(topic):
     """Generate optimized prompt for qwen3:8b - versione ottimizzata"""
     
     # Seleziona link casuali
     internal_link = random.choice(INTERNAL_LINKS)
-    external_source = random.choice(EXTERNAL_SOURCES)
+    external_url, external_name, external_phrase = select_external_source(topic)
     
     prompt = f"""You are Francesco Rosso Zingone, Italy's first Cyborg Business Consultant with 25+ years of experience. Write a professional blog post for cyborgbusinessconsultant.com.
 
@@ -67,8 +106,8 @@ REQUIREMENTS:
 - Perfect English
 - Professional, authoritative tone (NO sci-fi language)
 - Include Hugo front matter with complete SEO fields
-- 1 external link to {external_source[1]} ({external_source[0]})
-- 1 internal link to {internal_link[0]} ({internal_link[1]})
+- MANDATORY: Include external link in ROI section
+- MANDATORY: Include internal link in call to action
 - Focus on practical business applications and measurable results
 
 STRUCTURE REQUIRED:
@@ -95,7 +134,8 @@ Concrete examples with specific tools (ChatGPT, automation platforms, etc.) and 
 Step-by-step approach for businesses to adopt these AI solutions, including budget considerations and timeline.
 
 ## ROI and Competitive Advantage (H2)
-Measurable benefits with specific examples. Include external link to {external_source[1]} research here: {external_source[0]}
+Measurable benefits with specific examples. 
+MANDATORY: Include this EXACT external link: "{external_phrase} that [{external_name}]({external_url}) companies using AI achieve 25-40% efficiency gains."
 
 ## Key Takeaways
 - Bullet point 1 with actionable insight
@@ -178,10 +218,10 @@ def validate_content(content):
         issues.append(f"Word count {words} outside target range (550-650)")
     
     # Check for internal and external links
-    if '[Book a Discovery Day](' not in content and '[' not in content:
+    if 'Book a Discovery Day' not in content or '](' not in content:
         issues.append("Missing internal link")
     
-    if 'http' not in content:
+    if 'https://' not in content or '](' not in content:
         issues.append("Missing external link")
     
     return issues
