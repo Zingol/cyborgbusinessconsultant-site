@@ -103,3 +103,6 @@ weight = 50
 [markup.goldmark]
 [markup.goldmark.renderer]
 unsafe = true
+[[params.socialIcons]]
+name = "whatsapp"
+url = "https://wa.me/393336472122"
