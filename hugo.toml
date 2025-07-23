@@ -6,10 +6,10 @@ theme = "PaperMod"
 [params]
 env = "production"
 title = "Cyborg Business Consultant"
-description = "The First Post-Human Business Intelligence. Transform from AI Consumer to Business Cyborg in 30 Days."
+description = "The First Post-Human Business Intelligence. Transform from AI Consumer to Business Cyborg."
 keywords = ["AI Business Consulting", "Cyborg Business Evolution", "Post-Human Intelligence", "Business Transformation"]
 author = "Francesco Zingone"
-DateFormat = "January 2, 2006"
+DateFormat = "January 2, 2025"
 defaultTheme = "auto"
 disableThemeToggle = false
 ShowReadingTime = true
