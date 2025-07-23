@@ -3,7 +3,7 @@
 Weekly Blog Post Generator for cyborgbusinessconsultant.com
 Uses Ollama qwen3:8b to generate SEO-optimized blog posts
 Author: Francesco Rosso Zingone
-Version: 2.0 - Ottimizzato per 600 parole e contenuti concreti
+Version: 2.1 - Fixed complete version
 """
 
 import subprocess
@@ -172,6 +172,35 @@ Write the complete 600-word blog post following the exact structure above. Count
 
     return prompt
 
+def clean_content(raw_content):
+    """Clean content from qwen3:8b thinking process and extra output"""
+    
+    # Remove everything before the front matter
+    if "---" in raw_content:
+        # Find the first occurrence of front matter
+        start_index = raw_content.find("---")
+        if start_index != -1:
+            clean_text = raw_content[start_index:]
+            
+            # Remove any trailing metadata like word count
+            lines = clean_text.split('\n')
+            cleaned_lines = []
+            
+            for line in lines:
+                # Skip lines that look like metadata
+                if any(skip_phrase in line.lower() for skip_phrase in [
+                    "word count:", "*word count*", "thinking...", "...done thinking",
+                    "francesco rosso zingone - cyborg business consultant",
+                    "the manifesto", "business evolution", "about francesco",
+                    "insights", "contact", "home", "min ·", "words ·"
+                ]):
+                    continue
+                cleaned_lines.append(line)
+            
+            return '\n'.join(cleaned_lines).strip()
+    
+    return raw_content
+
 def call_ollama(prompt):
     """Call Ollama with qwen3:8b model - versione ottimizzata"""
     try:
@@ -185,7 +214,10 @@ def call_ollama(prompt):
         )
         
         if result.returncode == 0:
-            return result.stdout.strip()
+            raw_content = result.stdout.strip()
+            # Clean the content from thinking process and metadata
+            cleaned_content = clean_content(raw_content)
+            return cleaned_content
         else:
             print(f"❌ Ollama error: {result.stderr}")
             return None
@@ -196,6 +228,34 @@ def call_ollama(prompt):
     except Exception as e:
         print(f"❌ Error calling Ollama: {e}")
         return None
+
+def add_missing_external_link(content, external_url, external_name, external_phrase):
+    """Add external link if missing from content"""
+    
+    # Check if external link is already present
+    if external_url in content or f"[{external_name}]" in content:
+        return content
+    
+    # Look for McKinsey/research mentions without links
+    lines = content.split('\n')
+    updated_lines = []
+    link_added = False
+    
+    for line in lines:
+        # Look for research mentions in ROI section
+        if not link_added and any(term in line.lower() for term in ['mckinsey', 'research', 'studies show', 'analysis']):
+            # Add the link to this line
+            if 'mckinsey' in line.lower() and '[' not in line:
+                line = line.replace('McKinsey studies show', f'{external_phrase} that [{external_name}]({external_url})')
+                link_added = True
+            elif 'research' in line.lower() and '[' not in line and not link_added:
+                # Add link at the end of the paragraph
+                line = f"{line} {external_phrase} that [{external_name}]({external_url}) companies achieve significant efficiency gains."
+                link_added = True
+        
+        updated_lines.append(line)
+    
+    return '\n'.join(updated_lines)
 
 def validate_content(content):
     """Validate generated content for quality and requirements"""
@@ -297,8 +357,11 @@ def main():
     topic = random.choice(TOPICS)
     print(f"📝 Selected topic: {topic}")
     
-    # Generate prompt
+    # Generate prompt  
     prompt = generate_prompt(topic)
+    
+    # Get external source info for link addition
+    external_url, external_name, external_phrase = select_external_source(topic)
     
     # Call Ollama
     content = call_ollama(prompt)
@@ -308,6 +371,12 @@ def main():
         sys.exit(1)
     
     print("✅ Content generated successfully")
+    
+    # Add missing external link if needed
+    enhanced_content = add_missing_external_link(content, external_url, external_name, external_phrase)
+    if enhanced_content != content:
+        print("🔗 Added missing external link")
+        content = enhanced_content
     
     # Validate content
     issues = validate_content(content)
@@ -335,9 +404,9 @@ def main():
         print("\n" + "="*50)
         print("CONTENT PREVIEW:")
         print("="*50)
-        preview_lines = content.split('\n')[:20]  # First 20 lines
+        preview_lines = content.split('\n')[:25]  # First 25 lines
         print('\n'.join(preview_lines))
-        if len(content.split('\n')) > 20:
+        if len(content.split('\n')) > 25:
             print("...")
         print("="*50)
         
