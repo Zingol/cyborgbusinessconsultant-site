@@ -32,7 +32,7 @@ tocopen = false
 enabled = true
 title = "The First Cyborg Business Consultant"
 subtitle = "Evolving businesses beyond human limitations through conscious AI integration"
-imageUrl = "/static/images/profile.jpg"
+imageUrl = "/images/profile.jpg"
 imageTitle = "Francesco Zingone - Cyborg Business Consultant"
 
 [[params.profileMode.buttons]]
