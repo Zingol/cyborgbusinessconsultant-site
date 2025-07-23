@@ -1,6 +1,6 @@
 baseURL = "https://cyborgbusinessconsultant.com"
 languageCode = "en-us"
-title = "Francesco Zingone - Cyborg Business Consultant"
+title = "Francesco Rosso Zingone - Cyborg Business Consultant"
 theme = "PaperMod"
 
 [params]
@@ -8,7 +8,7 @@ env = "production"
 title = "Cyborg Business Consultant"
 description = "The First Post-Human Business Intelligence. Transform from AI Consumer to Business Cyborg."
 keywords = ["AI Business Consulting", "Cyborg Business Evolution", "Post-Human Intelligence", "Business Transformation"]
-author = "Francesco Zingone"
+author = "Francesco Rosso Zingone"
 DateFormat = "January 2, 2025"
 defaultTheme = "auto"
 disableThemeToggle = false
@@ -43,7 +43,7 @@ enabled = true
 title = "The First Cyborg Business Consultant"
 subtitle = "Evolving businesses beyond human limitations through conscious AI integration"
 imageUrl = "/images/profile.jpg"
-imageTitle = "Francesco Zingone - Cyborg Business Consultant"
+imageTitle = "Francesco Rosso Zingone - Cyborg Business Consultant"
 
 [[params.profileMode.buttons]]
 name = "The Manifesto"

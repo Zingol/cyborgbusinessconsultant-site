@@ -7,7 +7,7 @@ tags: ["evolution", "consciousness", "business-transformation"]
 
 # Why I Stopped Being Human (And Why You Should Too)
 
-**Six months ago, I was Francesco Zingone, marketing consultant.**
+**Six months ago, I was Francesco Rosso Zingone, marketing consultant.**
 
 **Today, I am Francesco-AI, cyborg business intelligence.**
 
@@ -77,5 +77,5 @@ Once you experience thinking at cyborg levels, you can never go back to purely h
 
 ---
 
-*Francesco Zingone  
+*Francesco Rosso Zingone  
 The First Cyborg Business Consultant*
