@@ -50,7 +50,7 @@ name = "The Manifesto"
 url = "/manifesto"
 
 [[params.profileMode.buttons]]
-name = "30-Day Evolution"
+name = "Business Evolution"
 url = "/evolution"
 
 [[params.profileMode.buttons]]
@@ -77,7 +77,7 @@ weight = 10
 
 [[menu.main]]
 identifier = "evolution"
-name = "30-Day Evolution"
+name = "Business Evolution"
 url = "/evolution/"
 weight = 20
 
