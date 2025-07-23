@@ -3,6 +3,7 @@
 Weekly Blog Post Generator for cyborgbusinessconsultant.com
 Uses Ollama qwen3:8b to generate SEO-optimized blog posts
 Author: Francesco Rosso Zingone
+Version: 2.0 - Ottimizzato per 600 parole e contenuti concreti
 """
 
 import subprocess
@@ -18,117 +19,123 @@ BLOG_DIR = "/Users/zingo/Documents/SITI_WEB/cyborgbusinessconsultant-site/conten
 SITE_DIR = "/Users/zingo/Documents/SITI_WEB/cyborgbusinessconsultant-site"
 OLLAMA_MODEL = "qwen3:8b"
 
-# Topic pool for variety
+# Topic pool for variety - più specifici e concreti
 TOPICS = [
-    "AI integration methodologies for business consulting",
-    "How data-driven consulting transforms client outcomes", 
-    "The competitive advantage of AI-augmented business strategy",
-    "Digital transformation frameworks for modern businesses",
-    "Measuring ROI in AI-powered consulting engagements",
-    "Building scalable business intelligence systems",
-    "The evolution of strategic consulting in the digital age",
-    "Automation vs human insight in business decision making",
-    "Client success patterns in AI-integrated consulting",
-    "Future-proofing business models with intelligent systems"
+    "AI automation tools transforming small business operations",
+    "How ChatGPT and AI assistants are revolutionizing customer service",
+    "Marketing automation with AI: ROI measurement and implementation",
+    "AI-driven financial analysis for better business decisions", 
+    "Supply chain optimization using artificial intelligence",
+    "Predictive analytics for inventory management and cost reduction",
+    "AI tools for competitive analysis and market research",
+    "Implementing AI chatbots for lead generation and conversion",
+    "Machine learning applications in e-commerce personalization",
+    "AI-powered content creation strategies for digital marketing"
 ]
 
-# Internal links pool
+# Internal links pool - più specifici
 INTERNAL_LINKS = [
-    ("/about", "Francesco Rosso Zingone's methodology"),
-    ("/evolution", "Business Evolution Program"),
+    ("/about", "Francesco Rosso Zingone's AI-integrated methodology"),
+    ("/contact", "Discovery Day consultation"),
     ("/manifesto", "Cyborg Business Consultant approach"),
-    ("/contact", "Discovery Day consultation")
+    ("/evolution", "Business Evolution Program")
+]
+
+# External links pool per autorevolezza
+EXTERNAL_SOURCES = [
+    ("https://www.mckinsey.com/", "McKinsey Global Institute"),
+    ("https://hbr.org/", "Harvard Business Review"),
+    ("https://www.pwc.com/", "PwC Research"),
+    ("https://www.bcg.com/", "Boston Consulting Group"),
+    ("https://www.accenture.com/", "Accenture Strategy"),
+    ("https://www.deloitte.com/", "Deloitte Insights")
 ]
 
 def generate_prompt(topic):
-    """Generate optimized prompt for qwen3:8b"""
+    """Generate optimized prompt for qwen3:8b - versione ottimizzata"""
     
-    prompt = f"""You are Francesco Rosso Zingone, Italy's first Cyborg Business Consultant with 25+ years of experience. Write a professional blog post about "{topic}" for cyborgbusinessconsultant.com.
+    # Seleziona link casuali
+    internal_link = random.choice(INTERNAL_LINKS)
+    external_source = random.choice(EXTERNAL_SOURCES)
+    
+    prompt = f"""You are Francesco Rosso Zingone, Italy's first Cyborg Business Consultant with 25+ years of experience. Write a professional blog post for cyborgbusinessconsultant.com.
 
-CRITICAL REQUIREMENTS:
-- Write in perfect English
-- 1200-1500 words
+TOPIC: "{topic}"
+
+REQUIREMENTS:
+- Exactly 600 words
+- Perfect English
 - Professional, authoritative tone (NO sci-fi language)
-- SEO optimized with natural keyword integration
-- Include Hugo front matter with all SEO fields
-- Focus on measurable business results and competitive advantage
+- Include Hugo front matter with complete SEO fields
+- 1 external link to {external_source[1]} ({external_source[0]})
+- 1 internal link to {internal_link[0]} ({internal_link[1]})
+- Focus on practical business applications and measurable results
 
-STRUCTURE MUST BE:
+STRUCTURE REQUIRED:
 ```
 ---
-title: "Compelling Title with Main Keyword"
-description: "SEO meta description 150-160 chars with keyword"
+title: "Compelling Title with Main Keyword (under 60 chars)"
+description: "SEO meta description 150-160 chars with primary keyword"
 date: {datetime.now().strftime('%Y-%m-%d')}
-tags: ["business-transformation", "AI-integration", "strategic-consulting", "competitive-advantage"]
-categories: ["Business Strategy", "AI Consulting"]
-keywords: ["AI business consulting", "strategic consulting", "digital transformation"]
+tags: ["AI-business", "digital-transformation", "business-automation"]
+categories: ["Business Strategy", "AI Applications"]
+keywords: ["AI business consulting", "Francesco Rosso Zingone", "business automation", "digital transformation"]
 ---
 
-# Compelling Headline
+# Compelling Headline (H1)
 
-**Strong opening sentence that hooks the reader.**
+**Strong opening sentence that hooks the reader with a concrete benefit or statistic.**
 
-Introduction paragraph that establishes the problem/opportunity and your authority.
+Brief introduction paragraph establishing the problem/opportunity and your 25+ years of authority.
 
----
+## Practical Applications (H2)
+Concrete examples with specific tools (ChatGPT, automation platforms, etc.) and realistic metrics (efficiency gains, cost savings percentages).
 
-## First Major Section
+## Implementation Strategy (H2)  
+Step-by-step approach for businesses to adopt these AI solutions, including budget considerations and timeline.
 
-Content with practical insights, include specific metrics when possible.
-
-## Second Major Section  
-
-More strategic insights with real-world applications.
-
-## Third Major Section
-
-Advanced concepts with actionable frameworks.
-
----
+## ROI and Competitive Advantage (H2)
+Measurable benefits with specific examples. Include external link to {external_source[1]} research here: {external_source[0]}
 
 ## Key Takeaways
-
-Summary of main points with practical next steps.
-
----
-
-*This insights series explores advanced methodologies in AI-integrated business consulting.*
-
-**Ready to transform your consulting approach? [Book a Discovery Day](/contact).**
+- Bullet point 1 with actionable insight
+- Bullet point 2 with practical tip  
+- Bullet point 3 with implementation advice
 
 ---
 
-*Francesco Rosso Zingone  
-The First Cyborg Business Consultant*
+**Ready to implement AI solutions in your business? [Book a Discovery Day]({internal_link[0]}).**
+
+*Francesco Rosso Zingone - Italy's First Cyborg Business Consultant*
 ```
 
 CONTENT GUIDELINES:
-- Reference your 25+ years of experience naturally
-- Mention "AI-integrated consulting methodology" 
-- Include at least one specific metric/result (can be hypothetical but realistic)
-- Focus on ROI, efficiency gains, competitive positioning
-- Use terms like "measurable results", "strategic advantage", "proven methodologies"
-- Avoid terms like "transcend", "evolve species", "post-human"
-- Keep tone professional but accessible
+- Reference your 25+ years of experience naturally in introduction
+- Mention "AI-integrated consulting methodology" and "fractional CMO" organically
+- Include specific metrics: efficiency gains (20-40%), cost reductions (15-30%), time savings
+- Use terms like "measurable results", "competitive advantage", "proven methodologies"
+- Avoid sci-fi terms: no "transcend", "evolve", "post-human", "species"
+- Focus on: automation, optimization, data-driven decisions, ROI, scalability
+- Keep tone professional but accessible - business executive level
 
 SEO KEYWORDS TO INTEGRATE NATURALLY:
-- AI business consulting
-- Strategic consulting  
-- Digital transformation
-- Business intelligence
-- Competitive advantage
+- AI business consulting (primary)
+- Business automation
+- Digital transformation  
 - Francesco Rosso Zingone
 - Fractional CMO
-- Business automation
+- Competitive advantage
+- AI tools
+- Business intelligence
 
-Write the complete blog post following the exact structure above."""
+Write the complete 600-word blog post following the exact structure above. Count words carefully to hit exactly 600."""
 
     return prompt
 
 def call_ollama(prompt):
-    """Call Ollama with qwen3:8b model"""
+    """Call Ollama with qwen3:8b model - versione ottimizzata"""
     try:
-        print("Calling Ollama qwen3:8b...")
+        print("🤖 Calling Ollama qwen3:8b...")
         result = subprocess.run(
             ["ollama", "run", OLLAMA_MODEL],
             input=prompt,
@@ -140,32 +147,44 @@ def call_ollama(prompt):
         if result.returncode == 0:
             return result.stdout.strip()
         else:
-            print(f"Ollama error: {result.stderr}")
+            print(f"❌ Ollama error: {result.stderr}")
             return None
             
     except subprocess.TimeoutExpired:
-        print("Ollama call timed out")
+        print("⏰ Ollama call timed out")
         return None
     except Exception as e:
-        print(f"Error calling Ollama: {e}")
+        print(f"❌ Error calling Ollama: {e}")
         return None
 
-def add_external_link_placeholder(content):
-    """Add placeholder for manual external link addition"""
+def validate_content(content):
+    """Validate generated content for quality and requirements"""
     
-    # Add note for manual external link insertion
-    lines = content.split('\n')
-    new_lines = []
+    issues = []
     
-    for line in lines:
-        new_lines.append(line)
-        # Add external link placeholder after first section
-        if line.startswith('## ') and len([l for l in new_lines if l.startswith('## ')]) == 1:
-            new_lines.append('')
-            new_lines.append('<!-- EXTERNAL LINK: Add relevant authoritative source (Harvard Business Review, McKinsey, MIT, etc.) related to this section -->')
-            new_lines.append('')
+    # Check for Hugo front matter
+    if not content.startswith('---'):
+        issues.append("Missing Hugo front matter")
     
-    return '\n'.join(new_lines)
+    # Check for required sections
+    required_sections = ['title:', 'description:', 'date:', 'tags:', 'categories:', 'keywords:']
+    for section in required_sections:
+        if section not in content:
+            issues.append(f"Missing {section} in front matter")
+    
+    # Check word count (approximate)
+    words = len(content.split())
+    if words < 550 or words > 650:
+        issues.append(f"Word count {words} outside target range (550-650)")
+    
+    # Check for internal and external links
+    if '[Book a Discovery Day](' not in content and '[' not in content:
+        issues.append("Missing internal link")
+    
+    if 'http' not in content:
+        issues.append("Missing external link")
+    
+    return issues
 
 def create_filename(content):
     """Create SEO-friendly filename from title"""
@@ -182,7 +201,7 @@ def create_filename(content):
         slug = re.sub(r'\s+', '-', slug.strip())
         slug = slug.lower()[:50]  # Limit length
     else:
-        slug = f"business-insights-{datetime.now().strftime('%m-%d')}"
+        slug = f"ai-business-insights-{datetime.now().strftime('%m-%d')}"
     
     # Add date prefix
     date_str = datetime.now().strftime("%Y-%m-%d")
@@ -232,6 +251,7 @@ def main():
     """Main execution function"""
     print("🤖 Starting weekly blog post generation for cyborgbusinessconsultant.com")
     print(f"⏰ {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"🎯 Target: 600 words, SEO optimized, business-focused")
     
     # Select random topic
     topic = random.choice(TOPICS)
@@ -249,15 +269,24 @@ def main():
     
     print("✅ Content generated successfully")
     
-    # Add external link placeholder
-    enhanced_content = add_external_link_placeholder(content)
+    # Validate content
+    issues = validate_content(content)
+    if issues:
+        print("⚠️ Content validation issues:")
+        for issue in issues:
+            print(f"   • {issue}")
+        
+        # Continue anyway but note issues
+        print("📝 Proceeding with generated content...")
+    else:
+        print("✅ Content validation passed")
     
     # Create filename
-    filename = create_filename(enhanced_content)
+    filename = create_filename(content)
     print(f"📁 Filename: {filename}")
     
     # Save post
-    success, filepath = save_post(enhanced_content, filename)
+    success, filepath = save_post(content, filename)
     
     if success:
         print(f"✅ Blog post created: {filename}")
@@ -266,8 +295,15 @@ def main():
         print("\n" + "="*50)
         print("CONTENT PREVIEW:")
         print("="*50)
-        print(enhanced_content[:500] + "...")
+        preview_lines = content.split('\n')[:20]  # First 20 lines
+        print('\n'.join(preview_lines))
+        if len(content.split('\n')) > 20:
+            print("...")
         print("="*50)
+        
+        # Word count
+        word_count = len(content.split())
+        print(f"📊 Word count: {word_count}")
         
         # Commit and push
         if git_commit_and_push():
