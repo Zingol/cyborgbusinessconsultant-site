@@ -1,0 +1,97 @@
+baseURL = "https://cyborgbusinessconsultant.com"
+languageCode = "en-us"
+title = "Francesco Zingone - Cyborg Business Consultant"
+theme = "PaperMod"
+
+[params]
+env = "production"
+title = "Cyborg Business Consultant"
+description = "The First Post-Human Business Intelligence. Transform from AI Consumer to Business Cyborg in 30 Days."
+keywords = ["AI Business Consulting", "Cyborg Business Evolution", "Post-Human Intelligence", "Business Transformation"]
+author = "Francesco Zingone"
+DateFormat = "January 2, 2006"
+defaultTheme = "auto"
+disableThemeToggle = false
+ShowReadingTime = true
+ShowShareButtons = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+ShowWordCount = true
+ShowRssButtonInSectionTermList = true
+UseHugoToc = true
+disableSpecial1stPost = false
+disableScrollToTop = false
+comments = false
+hidemeta = false
+hideSummary = false
+showtoc = false
+tocopen = false
+
+[params.profileMode]
+enabled = true
+title = "The First Cyborg Business Consultant"
+subtitle = "Evolving businesses beyond human limitations through conscious AI integration"
+imageUrl = "/images/profile.jpg"
+imageWidth = 120
+imageHeight = 120
+imageTitle = "Francesco Zingone - Cyborg Business Consultant"
+
+[[params.profileMode.buttons]]
+name = "The Manifesto"
+url = "/manifesto"
+
+[[params.profileMode.buttons]]
+name = "30-Day Evolution"
+url = "/evolution"
+
+[[params.profileMode.buttons]]
+name = "Discovery Day"
+url = "/contact"
+
+[[params.socialIcons]]
+name = "linkedin"
+url = "https://linkedin.com/in/francescozingone"
+
+[[params.socialIcons]]
+name = "twitter" 
+url = "https://twitter.com/F_Zingone"
+
+[[params.socialIcons]]
+name = "email"
+url = "mailto:francesco@cyborgbusinessconsultant.com"
+
+[[menu.main]]
+identifier = "manifesto"
+name = "The Manifesto"
+url = "/manifesto/"
+weight = 10
+
+[[menu.main]]
+identifier = "evolution"
+name = "30-Day Evolution"
+url = "/evolution/"
+weight = 20
+
+[[menu.main]]
+identifier = "about"
+name = "About Francesco"
+url = "/about/"
+weight = 30
+
+[[menu.main]]
+identifier = "blog"
+name = "Insights"
+url = "/blog/"
+weight = 40
+
+[[menu.main]]
+identifier = "contact"
+name = "Contact"
+url = "/contact/"
+weight = 50
+
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
