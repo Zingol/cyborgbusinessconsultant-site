@@ -95,6 +95,7 @@ I speak on:
 **LinkedIn:** [Francesco Rosso Zingone](https://linkedin.com/in/francescozingone)  
 **Twitter:** [@F_Zingone](https://twitter.com/F_Zingone)  
 **Email:** francesco@rossozingone.it
+**WhatsApp:** [+39 333 647 2122](https://wa.me/393336472122)
 
 ---
 
