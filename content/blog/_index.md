@@ -1,4 +1,5 @@
 ---
+---
 title: "Business Insights & Strategic Thinking"
 description: "Insights on innovation, strategy and the future of business in the AI era"
 ---
