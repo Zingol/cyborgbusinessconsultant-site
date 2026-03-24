@@ -16,7 +16,7 @@ date: 2025-07-23
 ### **1998-2022: Building the Experience**
 For 25 years, I have developed skills that today allow me to perfectly integrate business strategy and artificial intelligence:
 
-- **Fractional CMO** across multiple industries and company sizes
+- **Fractional CMO** across multiple industries and company sizes — delivering [strategic direction to Italian SMEs through RossoZingone](https://rossozingone.it/servizi/fractional-cmo-ceo/)
 - **BDS Ambassador AICIM** with deep institutional business knowledge
 - **Network Member** of Fractional Manager Italia
 - **Integrated approach** that combines strategic vision with practical implementation
@@ -58,7 +58,7 @@ My working method is based on strategic integration of:
 ## THE TRACK RECORD
 
 ### **Professional Credentials:**
-- **25+ years** transforming businesses as Fractional CMO
+- **25+ years** transforming businesses as Fractional CMO through [RossoZingone](https://rossozingone.it/)
 - **BDS Ambassador** AICIM with institutional recognition
 - **Fractional Manager Italia** network member
 - **Multi-industry expertise** across technology, manufacturing, services

@@ -1,0 +1,42 @@
+<!-- Deep Chat CDN -->
+<script type="module" src="https://unpkg.com/deep-chat@latest/dist/deepChat.bundle.js"></script>
+
+<!-- Deep Chat Custom Styles -->
+<style>
+  .deep-chat-container {
+    position: sticky;
+    top: 60px; /* Adjust based on header height */
+    z-index: 100;
+    width: 100%;
+    background: var(--theme);
+    border-bottom: 1px solid var(--border);
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .deep-chat-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 400px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .deep-chat-container {
+      top: 50px;
+      padding: 5px;
+    }
+    
+    .deep-chat-wrapper {
+      height: 300px;
+    }
+  }
+  
+  /* Hide on very small screens if needed */
+  @media (max-width: 480px) {
+    .deep-chat-container {
+      display: none;
+    }
+  }
+</style></content>
+</invoke>
